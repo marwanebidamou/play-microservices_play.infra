@@ -32,3 +32,9 @@ az group create --name $appname --location eastus
 $dbaccountname="playeconomydbazure" #must be unique globally
 az cosmosdb create --name $dbaccountname --resource-group $appname --kind MongoDB --enable-free-tier
 ```
+
+## Creating the Service Bus namespace
+```powershell
+$azservicebusnamespace="azservicebuseconomy"
+az servicebus namespace create --name $azservicebusnamespace --resource-group $appname --sku Standard
+```
