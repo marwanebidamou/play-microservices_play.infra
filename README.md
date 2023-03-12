@@ -26,3 +26,9 @@ az account set --subscription "Pay-as-you-go"
 $appname="playeconomy"
 az group create --name $appname --location eastus
 ```
+
+## Creating the Cosmos DB Account
+```powershell
+$dbaccountname="playeconomydbazure" #must be unique globally
+az cosmosdb create --name $dbaccountname --resource-group $appname --kind MongoDB --enable-free-tier
+```
