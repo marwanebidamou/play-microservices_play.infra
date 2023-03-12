@@ -12,3 +12,17 @@ dotnet nuget add source --username USERNAME --password $gh_pat --store-password-
 ```powershell
 dotnet nuget list source
 ```
+
+## Connecting to azure via azure cli
+```powershell
+#Login
+az login
+#Setting default subscription
+az account set --subscription "Pay-as-you-go"
+```
+
+## Creating the Azure resource group
+```powershell
+$appname="playeconomy"
+az group create --name $appname --location eastus
+```
