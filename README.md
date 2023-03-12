@@ -38,3 +38,9 @@ az cosmosdb create --name $dbaccountname --resource-group $appname --kind MongoD
 $azservicebusnamespace="azservicebuseconomy"
 az servicebus namespace create --name $azservicebusnamespace --resource-group $appname --sku Standard
 ```
+
+## Creating the Container Registry
+```powershell
+$acrname="azacreconomy"
+az acr create --name $acrname --resource-group $appname --sku Basic
+```
